@@ -39,7 +39,7 @@ async def create_user(body: UserCreate, db: AsyncSession = Depends(get_db)) -> S
 
 
 @user_router.post("/create_article")
-async def create_article(body: ArticleCreate = Form(...), images: UploadFile = File(...),  db: AsyncSession = Depends(get_db)):
+async def create_article(body: ArticleCreate = Form(...), db: AsyncSession = Depends(get_db)):
     # global image
     # # res = []
     #
